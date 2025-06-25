@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Advanced Scientific Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjs@12.4.1/lib/browser/math.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="top-bar">
+      <div class="theme-toggle" id="themeToggle">☀️</div>
+    </div>
+    <div class="calculator" tabindex="0">
+      <div class="expression" id="expression"></div>
+      <input type="text" class="screen" id="screen" disabled />
+      <div class="preview-row">
+        <div class="preview" id="preview"></div>
+        <button class="copy-btn" title="Copy result" id="copyBtn">📋</button>
+      </div>
+      <div class="keys">
+        <!-- Scientific -->
+        <button class="btn gray" data-func="sin">sin</button>
+        <button class="btn gray" data-func="cos">cos</button>
+        <button class="btn gray" data-func="tan">tan</button>
+        <button class="btn gray" data-func="sqrt">√</button>
+
+        <button class="btn gray" data-func="log10">log</button>
+        <button class="btn gray" data-func="log">ln</button>
+        <button class="btn gray" data-func="exp">eˣ</button>
+        <button class="btn gray" data-func="10^">10ˣ</button>
+
+        <button class="btn" data-number="7">7</button>
+        <button class="btn" data-number="8">8</button>
+        <button class="btn" data-number="9">9</button>
+        <button class="btn orange" data-action="operator">/</button>
+
+        <button class="btn" data-number="4">4</button>
+        <button class="btn" data-number="5">5</button>
+        <button class="btn" data-number="6">6</button>
+        <button class="btn orange" data-action="operator">*</button>
+
+        <button class="btn" data-number="1">1</button>
+        <button class="btn" data-number="2">2</button>
+        <button class="btn" data-number="3">3</button>
+        <button class="btn orange" data-action="operator">-</button>
+
+        <button class="btn" data-number="0">0</button>
+        <button class="btn" data-number=".">.</button>
+        <button class="btn gray" data-func="pi">π</button>
+        <button class="btn gray" data-func="e">e</button>
+
+        <button class="btn gray" data-action="open">(</button>
+        <button class="btn gray" data-action="close">)</button>
+        <button class="btn gray" data-action="clear">C</button>
+        <button class="btn gray" data-action="delete">⌫</button>
+        <button class="btn orange" data-action="operator">+</button>
+        <button class="btn orange" data-action="equals">=</button>
+      </div>
+      <div class="history" id="history"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
